@@ -1,0 +1,14 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: sf-release-readiness-ba5a6
+  version: 1.0.0
+  description: SF Release Readiness Agent — AI agent that reviews required SuccessFactors configuration changes before each release, assesses impact across multiple tenants, and applies low-risk changes automatically with human confirmation.
+
+assets:
+  - ref: ./assets/sf-release-readiness-agent/asset.yaml
+  - ref: ./assets/plt-role-based-permissions-mcp-server/asset.yaml
+  - ref: ./assets/plt-generic-objects-mcp-server/asset.yaml
+  - ref: ./assets/foundation-platform-plt-mcp-server/asset.yaml
+  - ref: ./assets/plt-user-management-mcp-server/asset.yaml

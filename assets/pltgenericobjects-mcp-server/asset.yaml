@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: pltgenericobjects-mcp-server
+  description: Exposes SAP SuccessFactors Generic Objects (MDF Enum and Localized Values) as MCP tools for read-write access to picklist-equivalent configuration data.
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+provides:
+  apis:
+    - name: pltgenericobjects-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:sf-release-readiness-ba5a6.pltgenericobjects-mcp-server:v1
+
+requires:
+  - name: PLTGenericObjects
+    kind: api
+    ordId: sap.sf:apiResource:PLTGenericObjects:v1

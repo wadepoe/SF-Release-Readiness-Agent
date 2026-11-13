@@ -1,0 +1,662 @@
+{
+  "servers": {
+    "pltrolebasedpermissions": {
+      "mcp_server_name": "sap.mcp/PLTRoleBasedPermissions",
+      "description": "MCP server for pltrolebasedpermissions",
+      "tools": {
+        "get_metadata_sfodata": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "batch_for_sfodata": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "list_rbpbasicpermission_for_sfodata": {
+          "description": "Retrieve a list of entities from the RBPBasicPermission collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "permissionId": "1001",
+            "permissionType": "GENERAL",
+            "permissionStringValue": "VIEW_PAYSLIP"
+          }
+        },
+        "list_rbprole_for_sfodata": {
+          "description": "Retrieve a list of entities from the RBPRole collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "roleId": "ROLE_001",
+            "roleName": "Employee Self Service",
+            "roleDesc": "Standard employee role",
+            "userType": "E"
+          }
+        },
+        "get_rbprole_for_sfodata": {
+          "description": "Retrieve a single entity by its key from the RBPRole collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "roleid": {
+                "type": "string",
+                "description": "roleid"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "roleId": "ROLE_001",
+            "roleName": "Employee Self Service",
+            "roleDesc": "Standard employee role",
+            "userType": "E"
+          }
+        }
+      }
+    },
+    "pltgenericobjects": {
+      "mcp_server_name": "sap.mcp/PLTGenericObjects",
+      "description": "MCP server for pltgenericobjects",
+      "tools": {
+        "get_metadata_sfodata": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "batch_for_sfodata": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "list_mdfenumvalue_for_sfodata": {
+          "description": "Retrieve a list of entities from the MDFEnumValue collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "externalCode": "ACTIVE",
+            "externalName_defaultValue": "Active",
+            "status": "A"
+          }
+        },
+        "update_mdfenumvalue_for_sfodata": {
+          "description": "Update an entity in MDFEnumValue EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "description": "key"
+              },
+              "value": {
+                "type": "string",
+                "description": "value"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "externalCode": "ACTIVE",
+                "externalName_defaultValue": "Active",
+                "status": "A"
+              }
+            ]
+          }
+        },
+        "get_mdfenumvalue_for_sfodata": {
+          "description": "Retrieve a single entity by its key from the MDFEnumValue collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "description": "key"
+              },
+              "value": {
+                "type": "string",
+                "description": "value"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "externalCode": "ACTIVE",
+            "externalName_defaultValue": "Active",
+            "status": "A"
+          }
+        }
+      }
+    },
+    "foundationplatformplt": {
+      "mcp_server_name": "sap.mcp/FoundationPlatformPLT",
+      "description": "MCP server for foundationplatformplt",
+      "tools": {
+        "get_metadata_sfodata": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "batch_for_sfodata": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "list_picklistvaluev2_for_sfodata": {
+          "description": "Retrieve a list of entities from the PickListValueV2 collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "id": "1",
+            "externalCode": "ACTIVE",
+            "status": "A"
+          }
+        },
+        "update_picklistvaluev2_for_sfodata": {
+          "description": "Update an entity in PickListValueV2 EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "picklistv2_effectivestartdate": {
+                "type": "string",
+                "description": "picklistv2_effectivestartdate"
+              },
+              "picklistv2_id": {
+                "type": "string",
+                "description": "picklistv2_id"
+              },
+              "externalcode": {
+                "type": "string",
+                "description": "externalcode"
+              },
+              "label_de_de": {
+                "type": "string",
+                "description": "label_de_de"
+              },
+              "label_defaultvalue": {
+                "type": "string",
+                "description": "label_defaultvalue"
+              },
+              "label_en_gb": {
+                "type": "string",
+                "description": "label_en_gb"
+              },
+              "label_en_us": {
+                "type": "string",
+                "description": "label_en_us"
+              },
+              "label_es_es": {
+                "type": "string",
+                "description": "label_es_es"
+              },
+              "label_fr_fr": {
+                "type": "string",
+                "description": "label_fr_fr"
+              },
+              "label_ja_jp": {
+                "type": "string",
+                "description": "label_ja_jp"
+              },
+              "label_ko_kr": {
+                "type": "string",
+                "description": "label_ko_kr"
+              },
+              "label_localized": {
+                "type": "string",
+                "description": "label_localized"
+              },
+              "label_nl_nl": {
+                "type": "string",
+                "description": "label_nl_nl"
+              },
+              "label_pt_br": {
+                "type": "string",
+                "description": "label_pt_br"
+              },
+              "label_pt_pt": {
+                "type": "string",
+                "description": "label_pt_pt"
+              },
+              "label_ru_ru": {
+                "type": "string",
+                "description": "label_ru_ru"
+              },
+              "label_zh_cn": {
+                "type": "string",
+                "description": "label_zh_cn"
+              },
+              "label_zh_tw": {
+                "type": "string",
+                "description": "label_zh_tw"
+              },
+              "nonuniqueexternalcode": {
+                "type": "string",
+                "description": "nonuniqueexternalcode"
+              },
+              "parentpicklistvalue": {
+                "type": "string",
+                "description": "parentpicklistvalue"
+              },
+              "status": {
+                "type": "string",
+                "description": "status"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "id": "1",
+                "externalCode": "ACTIVE",
+                "status": "A"
+              }
+            ]
+          }
+        },
+        "get_picklistvaluev2_for_sfodata": {
+          "description": "Retrieve a single entity by its key from the PickListValueV2 collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "picklistv2_effectivestartdate": {
+                "type": "string",
+                "description": "picklistv2_effectivestartdate"
+              },
+              "picklistv2_id": {
+                "type": "string",
+                "description": "picklistv2_id"
+              },
+              "externalcode": {
+                "type": "string",
+                "description": "externalcode"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "id": "1",
+            "externalCode": "ACTIVE",
+            "status": "A"
+          }
+        },
+        "list_picklistv2_for_sfodata": {
+          "description": "Retrieve a list of entities from the PickListV2 collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "picklistId": "ecEncryptedField",
+            "status": "A"
+          }
+        },
+        "get_picklistv2_for_sfodata": {
+          "description": "Retrieve a single entity by its key from the PickListV2 collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "effectivestartdate": {
+                "type": "string",
+                "description": "effectivestartdate"
+              },
+              "id": {
+                "type": "string",
+                "description": "id"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "picklistId": "ecEncryptedField",
+            "status": "A"
+          }
+        }
+      }
+    },
+    "pltusermanagement": {
+      "mcp_server_name": "sap.mcp/PLTUserManagement",
+      "description": "MCP server for pltusermanagement",
+      "tools": {
+        "get_metadata_sfodata": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "batch_for_sfodata": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "id": "SAMPLE_001",
+            "status": "A"
+          }
+        },
+        "list_user_for_sfodata": {
+          "description": "Retrieve a list of entities from the User collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "type": "string",
+                "description": "filter"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "orderby": {
+                "type": "string",
+                "description": "orderby"
+              },
+              "top": {
+                "type": "string",
+                "description": "top"
+              },
+              "skip": {
+                "type": "string",
+                "description": "skip"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              },
+              "inlinecount": {
+                "type": "string",
+                "description": "inlinecount"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "userId": "admin@tenant.com",
+            "firstName": "Admin",
+            "status": "A"
+          }
+        },
+        "get_user_for_sfodata": {
+          "description": "Retrieve a single entity by its key from the User collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "userid": {
+                "type": "string",
+                "description": "userid"
+              },
+              "select": {
+                "type": "string",
+                "description": "select"
+              },
+              "expand": {
+                "type": "string",
+                "description": "expand"
+              }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "userId": "admin@tenant.com",
+            "firstName": "Admin",
+            "status": "A"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "sf-release-readiness-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 4,
+    "total_tools": 21,
+    "generated_from": [
+      "translation.json"
+    ],
+    "generation_date": "2026-11-13"
+  }
+}

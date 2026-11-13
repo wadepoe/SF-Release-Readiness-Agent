@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: pltusermanagement-mcp-server
+  description: Exposes SAP SuccessFactors User Management read operations as MCP tools for querying user configuration state across tenants.
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+provides:
+  apis:
+    - name: pltusermanagement-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:sf-release-readiness-ba5a6.pltusermanagement-mcp-server:v1
+
+requires:
+  - name: PLTUserManagement
+    kind: api
+    ordId: sap.sf:apiResource:PLTUserManagement:v1

@@ -1,0 +1,19 @@
+[run]
+omit =
+    */extension_telemetry/*
+    app/__init__.py
+    app/datetime_tool.py
+    app/load_skill_resources.py
+    app/mcp_providers/*
+    app/prompt_injection_detector.py
+    app/util.py
+
+[report]
+omit =
+    */extension_telemetry/*
+    app/__init__.py
+    app/datetime_tool.py
+    app/load_skill_resources.py
+    app/mcp_providers/*
+    app/prompt_injection_detector.py
+    app/util.py

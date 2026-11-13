@@ -1,0 +1,5 @@
+target-version = "py311"
+
+[lint.per-file-ignores]
+# AI Core configuration must run before importing model frameworks and app modules.
+"app/main.py" = ["E402"]

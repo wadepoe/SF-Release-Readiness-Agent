@@ -1,0 +1,6209 @@
+[
+  {
+    "name": "get_metadata_sfodata",
+    "title": "get_metadata_sfodata",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "batch_for_sfodata",
+    "title": "batch_for_sfodata",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "list_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "list_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_voluntarySeparationRequest collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "create_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Create a new instance of the cust_voluntarySeparationRequest EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "cust_eecomments",
+            "newParameterName": "cust_eecomments"
+          },
+          {
+            "name": "cust_hrcomments",
+            "newParameterName": "cust_hrcomments"
+          },
+          {
+            "name": "cust_lastday",
+            "newParameterName": "cust_lastday"
+          },
+          {
+            "name": "cust_lastdayppolicy",
+            "newParameterName": "cust_lastdayppolicy"
+          },
+          {
+            "name": "cust_mgrcomments",
+            "newParameterName": "cust_mgrcomments"
+          },
+          {
+            "name": "cust_noticePeriodMonths",
+            "newParameterName": "cust_noticeperiodmonths"
+          },
+          {
+            "name": "cust_noticerecovery",
+            "newParameterName": "cust_noticerecovery"
+          },
+          {
+            "name": "cust_reason",
+            "newParameterName": "cust_reason"
+          },
+          {
+            "name": "cust_requestAsOfDate",
+            "newParameterName": "cust_requestasofdate"
+          },
+          {
+            "name": "cust_shortfallinnperiod",
+            "newParameterName": "cust_shortfallinnperiod"
+          },
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "mdfSystemEffectiveEndDate",
+            "newParameterName": "mdfsystemeffectiveenddate"
+          },
+          {
+            "name": "mdfSystemRecordStatus",
+            "newParameterName": "mdfsystemrecordstatus"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "update_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Update an entity in cust_voluntarySeparationRequest EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "delete_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Delete an entity from cust_voluntarySeparationRequest EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "get_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_voluntarySeparationRequest collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_voluntaryseparationrequest_for_sfodata",
+    "title": "count_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Get the total count of entities in the cust_voluntarySeparationRequest collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_commutingallowance_for_sfodata",
+    "title": "list_cust_CommutingAllowance_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_CommutingAllowance collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_commutingallowance_for_sfodata",
+    "title": "create_cust_CommutingAllowance_for_sfodata",
+    "description": "Create a new instance of the cust_CommutingAllowance EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "cust_Amount",
+            "newParameterName": "cust_amount"
+          },
+          {
+            "name": "cust_ConnectionPoint",
+            "newParameterName": "cust_connectionpoint"
+          },
+          {
+            "name": "cust_DestinationStation",
+            "newParameterName": "cust_destinationstation"
+          },
+          {
+            "name": "cust_OriginStation",
+            "newParameterName": "cust_originstation"
+          },
+          {
+            "name": "cust_PaymentInterval",
+            "newParameterName": "cust_paymentinterval"
+          },
+          {
+            "name": "cust_TrainLinename1",
+            "newParameterName": "cust_trainlinename1"
+          },
+          {
+            "name": "cust_TrainLinename2",
+            "newParameterName": "cust_trainlinename2"
+          },
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_commutingallowance_for_sfodata",
+    "title": "update_cust_CommutingAllowance_for_sfodata",
+    "description": "Update an entity in cust_CommutingAllowance EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "cust_Amount",
+            "newParameterName": "cust_amount"
+          },
+          {
+            "name": "cust_ConnectionPoint",
+            "newParameterName": "cust_connectionpoint"
+          },
+          {
+            "name": "cust_DestinationStation",
+            "newParameterName": "cust_destinationstation"
+          },
+          {
+            "name": "cust_OriginStation",
+            "newParameterName": "cust_originstation"
+          },
+          {
+            "name": "cust_PaymentInterval",
+            "newParameterName": "cust_paymentinterval"
+          },
+          {
+            "name": "cust_TrainLinename1",
+            "newParameterName": "cust_trainlinename1"
+          },
+          {
+            "name": "cust_TrainLinename2",
+            "newParameterName": "cust_trainlinename2"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_commutingallowance_for_sfodata",
+    "title": "delete_cust_CommutingAllowance_for_sfodata",
+    "description": "Delete an entity from cust_CommutingAllowance EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_commutingallowance_for_sfodata",
+    "title": "get_cust_CommutingAllowance_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_CommutingAllowance collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_commutingallowance_for_sfodata",
+    "title": "count_cust_CommutingAllowance_for_sfodata",
+    "description": "Get the total count of entities in the cust_CommutingAllowance collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "list_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_ProgressiveDisciplinaryAction collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "create_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Create a new instance of the cust_ProgressiveDisciplinaryAction EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "cust_EEAcknowledgement",
+            "newParameterName": "cust_eeacknowledgement"
+          },
+          {
+            "name": "cust_FacetoFaceMtg",
+            "newParameterName": "cust_facetofacemtg"
+          },
+          {
+            "name": "cust_IncidentDetails",
+            "newParameterName": "cust_incidentdetails"
+          },
+          {
+            "name": "cust_IncidentStatus",
+            "newParameterName": "cust_incidentstatus"
+          },
+          {
+            "name": "cust_InitiateVerbal",
+            "newParameterName": "cust_initiateverbal"
+          },
+          {
+            "name": "cust_Reason",
+            "newParameterName": "cust_reason"
+          },
+          {
+            "name": "cust_Severity",
+            "newParameterName": "cust_severity"
+          },
+          {
+            "name": "cust_VerbalComments",
+            "newParameterName": "cust_verbalcomments"
+          },
+          {
+            "name": "cust_dateofincident",
+            "newParameterName": "cust_dateofincident"
+          },
+          {
+            "name": "cust_step",
+            "newParameterName": "cust_step"
+          },
+          {
+            "name": "cust_unionRep",
+            "newParameterName": "cust_unionrep"
+          },
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          },
+          {
+            "name": "mdfSystemStatusNav",
+            "newParameterName": "mdfsystemstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "update_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Update an entity in cust_ProgressiveDisciplinaryAction EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "cust_EEAcknowledgement",
+            "newParameterName": "cust_eeacknowledgement"
+          },
+          {
+            "name": "cust_FacetoFaceMtg",
+            "newParameterName": "cust_facetofacemtg"
+          },
+          {
+            "name": "cust_IncidentDetails",
+            "newParameterName": "cust_incidentdetails"
+          },
+          {
+            "name": "cust_IncidentStatus",
+            "newParameterName": "cust_incidentstatus"
+          },
+          {
+            "name": "cust_InitiateVerbal",
+            "newParameterName": "cust_initiateverbal"
+          },
+          {
+            "name": "cust_Reason",
+            "newParameterName": "cust_reason"
+          },
+          {
+            "name": "cust_Severity",
+            "newParameterName": "cust_severity"
+          },
+          {
+            "name": "cust_VerbalComments",
+            "newParameterName": "cust_verbalcomments"
+          },
+          {
+            "name": "cust_dateofincident",
+            "newParameterName": "cust_dateofincident"
+          },
+          {
+            "name": "cust_step",
+            "newParameterName": "cust_step"
+          },
+          {
+            "name": "cust_unionRep",
+            "newParameterName": "cust_unionrep"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "delete_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Delete an entity from cust_ProgressiveDisciplinaryAction EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "get_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_ProgressiveDisciplinaryAction collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_progressivedisciplinaryaction_for_sfodata",
+    "title": "count_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Get the total count of entities in the cust_ProgressiveDisciplinaryAction collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_recruitinterviewjp_for_sfodata",
+    "title": "list_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_RecruitInterviewJP collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_recruitinterviewjp_for_sfodata",
+    "title": "create_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Create a new instance of the cust_RecruitInterviewJP EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "cust_RCInt_1Commu",
+            "newParameterName": "cust_rcint_1commu"
+          },
+          {
+            "name": "cust_RCInt_1CommuGR",
+            "newParameterName": "cust_rcint_1commugr"
+          },
+          {
+            "name": "cust_RCInt_2Mind",
+            "newParameterName": "cust_rcint_2mind"
+          },
+          {
+            "name": "cust_RCInt_2MindGR",
+            "newParameterName": "cust_rcint_2mindgr"
+          },
+          {
+            "name": "cust_RCInt_3Lead",
+            "newParameterName": "cust_rcint_3lead"
+          },
+          {
+            "name": "cust_RCInt_3LeadGR",
+            "newParameterName": "cust_rcint_3leadgr"
+          },
+          {
+            "name": "cust_RCInt_4Credit",
+            "newParameterName": "cust_rcint_4credit"
+          },
+          {
+            "name": "cust_RCInt_4CreditGR",
+            "newParameterName": "cust_rcint_4creditgr"
+          },
+          {
+            "name": "cust_RCInt_FinalGR",
+            "newParameterName": "cust_rcint_finalgr"
+          },
+          {
+            "name": "cust_RCInt_FinalTXT",
+            "newParameterName": "cust_rcint_finaltxt"
+          },
+          {
+            "name": "cust_RCinterviewer",
+            "newParameterName": "cust_rcinterviewer"
+          },
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "mdfSystemEffectiveEndDate",
+            "newParameterName": "mdfsystemeffectiveenddate"
+          },
+          {
+            "name": "mdfSystemRecordStatus",
+            "newParameterName": "mdfsystemrecordstatus"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_recruitinterviewjp_for_sfodata",
+    "title": "update_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Update an entity in cust_RecruitInterviewJP EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_recruitinterviewjp_for_sfodata",
+    "title": "delete_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Delete an entity from cust_RecruitInterviewJP EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_recruitinterviewjp_for_sfodata",
+    "title": "get_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_RecruitInterviewJP collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_recruitinterviewjp_for_sfodata",
+    "title": "count_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Get the total count of entities in the cust_RecruitInterviewJP collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_mdfenumvalue_for_sfodata",
+    "title": "list_MDFEnumValue_for_sfodata",
+    "description": "Retrieve a list of entities from the MDFEnumValue collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_mdfenumvalue_for_sfodata",
+    "title": "create_MDFEnumValue_for_sfodata",
+    "description": "Create a new instance of the MDFEnumValue EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "de_DE",
+            "newParameterName": "de_de"
+          },
+          {
+            "name": "en_GB",
+            "newParameterName": "en_gb"
+          },
+          {
+            "name": "en_US",
+            "newParameterName": "en_us"
+          },
+          {
+            "name": "es_ES",
+            "newParameterName": "es_es"
+          },
+          {
+            "name": "fr_FR",
+            "newParameterName": "fr_fr"
+          },
+          {
+            "name": "ja_JP",
+            "newParameterName": "ja_jp"
+          },
+          {
+            "name": "key",
+            "newParameterName": "key"
+          },
+          {
+            "name": "ko_KR",
+            "newParameterName": "ko_kr"
+          },
+          {
+            "name": "nl_NL",
+            "newParameterName": "nl_nl"
+          },
+          {
+            "name": "pt_BR",
+            "newParameterName": "pt_br"
+          },
+          {
+            "name": "pt_PT",
+            "newParameterName": "pt_pt"
+          },
+          {
+            "name": "ru_RU",
+            "newParameterName": "ru_ru"
+          },
+          {
+            "name": "value",
+            "newParameterName": "value"
+          },
+          {
+            "name": "zh_CN",
+            "newParameterName": "zh_cn"
+          },
+          {
+            "name": "zh_TW",
+            "newParameterName": "zh_tw"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_mdfenumvalue_for_sfodata",
+    "title": "update_MDFEnumValue_for_sfodata",
+    "description": "Update an entity in MDFEnumValue EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "key",
+            "newParameterName": "key"
+          },
+          {
+            "name": "value",
+            "newParameterName": "value"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_mdfenumvalue_for_sfodata",
+    "title": "delete_MDFEnumValue_for_sfodata",
+    "description": "Delete an entity from MDFEnumValue EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "key",
+            "newParameterName": "key"
+          },
+          {
+            "name": "value",
+            "newParameterName": "value"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfenumvalue_for_sfodata",
+    "title": "get_MDFEnumValue_for_sfodata",
+    "description": "Retrieve a single entity by its key from the MDFEnumValue collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "key",
+            "newParameterName": "key"
+          },
+          {
+            "name": "value",
+            "newParameterName": "value"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_mdfenumvalue_for_sfodata",
+    "title": "count_MDFEnumValue_for_sfodata",
+    "description": "Get the total count of entities in the MDFEnumValue collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFEnumValue",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "list_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_groupMedicalInsuranceIND collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "create_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Create a new instance of the cust_groupMedicalInsuranceIND EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "cust_endDate",
+            "newParameterName": "cust_enddate"
+          },
+          {
+            "name": "cust_hospitalName",
+            "newParameterName": "cust_hospitalname"
+          },
+          {
+            "name": "cust_illnessDesc",
+            "newParameterName": "cust_illnessdesc"
+          },
+          {
+            "name": "cust_patientName",
+            "newParameterName": "cust_patientname"
+          },
+          {
+            "name": "cust_relationship",
+            "newParameterName": "cust_relationship"
+          },
+          {
+            "name": "cust_startDate",
+            "newParameterName": "cust_startdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "mdfSystemRecordStatus",
+            "newParameterName": "mdfsystemrecordstatus"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "update_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Update an entity in cust_groupMedicalInsuranceIND EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "delete_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Delete an entity from cust_groupMedicalInsuranceIND EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "get_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_groupMedicalInsuranceIND collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_groupmedicalinsuranceind_for_sfodata",
+    "title": "count_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Get the total count of entities in the cust_groupMedicalInsuranceIND collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_grievances_for_sfodata",
+    "title": "list_cust_grievances_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_grievances collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_grievances_for_sfodata",
+    "title": "create_cust_grievances_for_sfodata",
+    "description": "Create a new instance of the cust_grievances EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "cust_attendGrievanceComm",
+            "newParameterName": "cust_attendgrievancecomm"
+          },
+          {
+            "name": "cust_coResponse",
+            "newParameterName": "cust_coresponse"
+          },
+          {
+            "name": "cust_coResponseDue",
+            "newParameterName": "cust_coresponsedue"
+          },
+          {
+            "name": "cust_comments",
+            "newParameterName": "cust_comments"
+          },
+          {
+            "name": "cust_dateSubmitted",
+            "newParameterName": "cust_datesubmitted"
+          },
+          {
+            "name": "cust_description",
+            "newParameterName": "cust_description"
+          },
+          {
+            "name": "cust_grievanceNumber",
+            "newParameterName": "cust_grievancenumber"
+          },
+          {
+            "name": "cust_grievanceStatus",
+            "newParameterName": "cust_grievancestatus"
+          },
+          {
+            "name": "cust_heardGrievance",
+            "newParameterName": "cust_heardgrievance"
+          },
+          {
+            "name": "cust_mngrRep1",
+            "newParameterName": "cust_mngrrep1"
+          },
+          {
+            "name": "cust_mngrRep2",
+            "newParameterName": "cust_mngrrep2"
+          },
+          {
+            "name": "cust_outcome",
+            "newParameterName": "cust_outcome"
+          },
+          {
+            "name": "cust_union",
+            "newParameterName": "cust_union"
+          },
+          {
+            "name": "cust_unionAppeal",
+            "newParameterName": "cust_unionappeal"
+          },
+          {
+            "name": "cust_unionAppealDue",
+            "newParameterName": "cust_unionappealdue"
+          },
+          {
+            "name": "cust_unionRep1",
+            "newParameterName": "cust_unionrep1"
+          },
+          {
+            "name": "cust_unionRep2",
+            "newParameterName": "cust_unionrep2"
+          },
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          },
+          {
+            "name": "mdfSystemStatusNav",
+            "newParameterName": "mdfsystemstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_grievances_for_sfodata",
+    "title": "update_cust_grievances_for_sfodata",
+    "description": "Update an entity in cust_grievances EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "cust_attendGrievanceComm",
+            "newParameterName": "cust_attendgrievancecomm"
+          },
+          {
+            "name": "cust_coResponse",
+            "newParameterName": "cust_coresponse"
+          },
+          {
+            "name": "cust_coResponseDue",
+            "newParameterName": "cust_coresponsedue"
+          },
+          {
+            "name": "cust_comments",
+            "newParameterName": "cust_comments"
+          },
+          {
+            "name": "cust_dateSubmitted",
+            "newParameterName": "cust_datesubmitted"
+          },
+          {
+            "name": "cust_description",
+            "newParameterName": "cust_description"
+          },
+          {
+            "name": "cust_grievanceNumber",
+            "newParameterName": "cust_grievancenumber"
+          },
+          {
+            "name": "cust_grievanceStatus",
+            "newParameterName": "cust_grievancestatus"
+          },
+          {
+            "name": "cust_heardGrievance",
+            "newParameterName": "cust_heardgrievance"
+          },
+          {
+            "name": "cust_mngrRep1",
+            "newParameterName": "cust_mngrrep1"
+          },
+          {
+            "name": "cust_mngrRep2",
+            "newParameterName": "cust_mngrrep2"
+          },
+          {
+            "name": "cust_outcome",
+            "newParameterName": "cust_outcome"
+          },
+          {
+            "name": "cust_union",
+            "newParameterName": "cust_union"
+          },
+          {
+            "name": "cust_unionAppeal",
+            "newParameterName": "cust_unionappeal"
+          },
+          {
+            "name": "cust_unionAppealDue",
+            "newParameterName": "cust_unionappealdue"
+          },
+          {
+            "name": "cust_unionRep1",
+            "newParameterName": "cust_unionrep1"
+          },
+          {
+            "name": "cust_unionRep2",
+            "newParameterName": "cust_unionrep2"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_grievances_for_sfodata",
+    "title": "delete_cust_grievances_for_sfodata",
+    "description": "Delete an entity from cust_grievances EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_grievances_for_sfodata",
+    "title": "get_cust_grievances_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_grievances collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_grievances_for_sfodata",
+    "title": "count_cust_grievances_for_sfodata",
+    "description": "Get the total count of entities in the cust_grievances collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_auth_sign_for_sfodata",
+    "title": "list_cust_auth_sign_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_auth_sign collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_auth_sign_for_sfodata",
+    "title": "create_cust_auth_sign_for_sfodata",
+    "description": "Create a new instance of the cust_auth_sign EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "cust_asofdate",
+            "newParameterName": "cust_asofdate"
+          },
+          {
+            "name": "cust_signature",
+            "newParameterName": "cust_signature"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_auth_sign_for_sfodata",
+    "title": "update_cust_auth_sign_for_sfodata",
+    "description": "Update an entity in cust_auth_sign EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "cust_asofdate",
+            "newParameterName": "cust_asofdate"
+          },
+          {
+            "name": "cust_signature",
+            "newParameterName": "cust_signature"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_auth_sign_for_sfodata",
+    "title": "delete_cust_auth_sign_for_sfodata",
+    "description": "Delete an entity from cust_auth_sign EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_auth_sign_for_sfodata",
+    "title": "get_cust_auth_sign_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_auth_sign collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_auth_sign_for_sfodata",
+    "title": "count_cust_auth_sign_for_sfodata",
+    "description": "Get the total count of entities in the cust_auth_sign collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_mdflocalizedvalue_for_sfodata",
+    "title": "list_MDFLocalizedValue_for_sfodata",
+    "description": "Retrieve a list of entities from the MDFLocalizedValue collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_mdflocalizedvalue_for_sfodata",
+    "title": "create_MDFLocalizedValue_for_sfodata",
+    "description": "Create a new instance of the MDFLocalizedValue EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "locale",
+            "newParameterName": "locale"
+          },
+          {
+            "name": "value",
+            "newParameterName": "value"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_mdflocalizedvalue_for_sfodata",
+    "title": "update_MDFLocalizedValue_for_sfodata",
+    "description": "Update an entity in MDFLocalizedValue EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "locale",
+            "newParameterName": "locale"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_mdflocalizedvalue_for_sfodata",
+    "title": "delete_MDFLocalizedValue_for_sfodata",
+    "description": "Delete an entity from MDFLocalizedValue EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "locale",
+            "newParameterName": "locale"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdflocalizedvalue_for_sfodata",
+    "title": "get_MDFLocalizedValue_for_sfodata",
+    "description": "Retrieve a single entity by its key from the MDFLocalizedValue collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "locale",
+            "newParameterName": "locale"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_mdflocalizedvalue_for_sfodata",
+    "title": "count_MDFLocalizedValue_for_sfodata",
+    "description": "Get the total count of entities in the MDFLocalizedValue collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "MDFLocalizedValue",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "list_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Retrieve a list of entities from the cust_groupInsuranceDetailsIND collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "create_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "create_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Create a new instance of the cust_groupInsuranceDetailsIND EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "cust_endDate",
+            "newParameterName": "cust_enddate"
+          },
+          {
+            "name": "cust_sicknessDetails",
+            "newParameterName": "cust_sicknessdetails"
+          },
+          {
+            "name": "cust_startDate",
+            "newParameterName": "cust_startdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "externalName",
+            "newParameterName": "externalname"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "mdfSystemRecordStatus",
+            "newParameterName": "mdfsystemrecordstatus"
+          },
+          {
+            "name": "mdfSystemRecordStatusNav",
+            "newParameterName": "mdfsystemrecordstatusnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "update_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "update_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Update an entity in cust_groupInsuranceDetailsIND EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "delete_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "delete_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Delete an entity from cust_groupInsuranceDetailsIND EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "get_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Retrieve a single entity by its key from the cust_groupInsuranceDetailsIND collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cust_groupinsurancedetailsind_for_sfodata",
+    "title": "count_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Get the total count of entities in the cust_groupInsuranceDetailsIND collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_voluntaryseparationrequest",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Navigate from cust_voluntarySeparationRequest to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_voluntaryseparationreque",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_voluntarySeparationRequest_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_voluntarySeparationRequest via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_voluntarySeparationRequest",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_commutingallowance",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_CommutingAllowance_for_sfodata",
+    "description": "Navigate from cust_CommutingAllowance to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_commutingallowance",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_CommutingAllowance_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_CommutingAllowance via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_CommutingAllowance",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_progressivedisciplinaryacti",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Navigate from cust_ProgressiveDisciplinaryAction to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_progressivedisciplinarya",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_ProgressiveDisciplinaryAction via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemstatusnav_in_cust_progressivedisciplinaryaction",
+    "title": "get_mdfSystemStatusNav_in_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Navigate from cust_ProgressiveDisciplinaryAction to the related MDFEnumValue entity via the 'mdfSystemStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "navigationProperty": {
+          "name": "mdfSystemStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemstatusnav_in_cust_progressivedisciplinaryaction",
+    "title": "update_mdfSystemStatusNav_in_cust_ProgressiveDisciplinaryAction_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_ProgressiveDisciplinaryAction via the 'mdfSystemStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_ProgressiveDisciplinaryAction",
+        "navigationProperty": {
+          "name": "mdfSystemStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_recruitinterviewjp",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Navigate from cust_RecruitInterviewJP to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_recruitinterviewjp",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_RecruitInterviewJP_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_RecruitInterviewJP via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_RecruitInterviewJP",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          },
+          {
+            "name": "mdfSystemTransactionSequence",
+            "newParameterName": "mdfsystemtransactionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_groupmedicalinsuranceind",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Navigate from cust_groupMedicalInsuranceIND to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_groupmedicalinsuranceind",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_groupMedicalInsuranceIND_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_groupMedicalInsuranceIND via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupMedicalInsuranceIND",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_grievances_for_sfodata",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_grievances_for_sfodata",
+    "description": "Navigate from cust_grievances to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_grievances_for_sfodata",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_grievances_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_grievances via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemstatusnav_in_cust_grievances_for_sfodata",
+    "title": "get_mdfSystemStatusNav_in_cust_grievances_for_sfodata",
+    "description": "Navigate from cust_grievances to the related MDFEnumValue entity via the 'mdfSystemStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "navigationProperty": {
+          "name": "mdfSystemStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemstatusnav_in_cust_grievances_for_sfodata",
+    "title": "update_mdfSystemStatusNav_in_cust_grievances_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_grievances via the 'mdfSystemStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_grievances",
+        "navigationProperty": {
+          "name": "mdfSystemStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "effectiveStartDate",
+            "newParameterName": "effectivestartdate"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_auth_sign_for_sfodata",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_auth_sign_for_sfodata",
+    "description": "Navigate from cust_auth_sign to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_auth_sign_for_sfodata",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_auth_sign_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_auth_sign via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_auth_sign",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get_mdfsystemrecordstatusnav_in_cust_groupinsurancedetailsind",
+    "title": "get_mdfSystemRecordStatusNav_in_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Navigate from cust_groupInsuranceDetailsIND to the related MDFEnumValue entity via the 'mdfSystemRecordStatusNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update_mdfsystemrecordstatusnav_in_cust_groupinsurancedetailsind",
+    "title": "update_mdfSystemRecordStatusNav_in_cust_groupInsuranceDetailsIND_for_sfodata",
+    "description": "Update the MDFEnumValue entity navigated from cust_groupInsuranceDetailsIND via the 'mdfSystemRecordStatusNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "cust_groupInsuranceDetailsIND",
+        "navigationProperty": {
+          "name": "mdfSystemRecordStatusNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "BenefitEmployeeClaim_id",
+            "newParameterName": "benefitemployeeclaim_id"
+          },
+          {
+            "name": "externalCode",
+            "newParameterName": "externalcode"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  }
+]
